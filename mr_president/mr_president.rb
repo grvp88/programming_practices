@@ -5,13 +5,13 @@
 CONVERSION_TO_HIGHWAY_COST = 1
 
 def file
-  # @file ||= File.readlines(File.join(File.dirname(__FILE__), "mr_president_input.txt"))
-  @file ||= @input.split("\n")
+  @file ||= File.readlines(File.join(File.dirname(__FILE__), "mr_president_input.txt"))
+  # @file ||= @input.split("\n")
 end
 
 def mr_president_variables
-  # @mr_president_variables ||= file.take(1)[0].split(" ")
-  @mr_president_variables ||= file[0].split(" ")
+  @mr_president_variables ||= file.take(1)[0].split(" ")
+  # @mr_president_variables ||= file[0].split(" ")
 end
 
 # from 2nd line
@@ -71,7 +71,7 @@ def unvisited_cities
   (1..number_of_cities).to_a - @visited_cities
 end
 
-@input ||= gets("\n\n").chomp
+# @input ||= gets("\n\n").chomp
 adjacency_matrix = build_adjacency_matrix
 first_road = select_first_road(adjacency_matrix)
 @visited_cities = [first_road[:start], first_road[:end]]
@@ -90,4 +90,3 @@ end
 # puts "Roads: #{@roads}"
 # puts "Final cost #{@roads.inject(0) { |sum, road| sum + road[:cost] }}"
 puts @roads.count > 0 ? @roads.count : -1
-
