@@ -49,6 +49,6 @@ You can transform to super a road either the road between cities 1 and 2 or the 
 
 ### Developer notes
 
-1. Use min spanning tree, Prim's algorithm
-2. Checkout: https://www.youtube.com/watch?v=jsmMtJpPnhU
+1. Use min spanning tree: a super basic, easy to understand is the Prim's algorithm
+2. Minimum Spanning Tree Concept: Checkout: https://www.youtube.com/watch?v=jsmMtJpPnhU
 3. 
